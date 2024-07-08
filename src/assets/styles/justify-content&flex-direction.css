@@ -1,0 +1,115 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap"); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: "Exo", Arial, sans-serif;
+    background-color: #557;
+    color: #fff;
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+    justify-content: center;
+    justify-items: center;
+    padding: 1rem;
+}
+
+@media (min-width: 760px) {
+    body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form {
+        grid-column: 1 / span 2;
+    }
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.form label {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.form select {
+    padding: 0.25em 0.5em;
+    font-size: inherit;
+    min-width: 160px;
+}
+
+.container {
+    background: #ffffff;
+    border: 3px solid #88978a;
+    border-radius: 7px;
+}
+
+.item {
+    background: #e8f0fe;
+    border: 2px solid #2938e9;
+    border-radius: 4px;
+    color: #000;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    inline-size: 600px;
+    block-size: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    inline-size: 88px;
+    block-size: 88px;
+}
+
+.item:nth-child(2) {
+    background-color: #efe1ff;
+}
+
+.item:nth-child(3) {
+    background-color: #bbd7af;
+}
+
+.item:nth-child(4) {
+    background-color: #ecbbbb;
+}
+
+.item:nth-child(5) {
+    background-color: #00f0ff;
+}
+
+.item:nth-child(6) {
+    background-color: #d7af0a;
+}
+
+.item:nth-child(7) {
+    background-color: #0ff0ae;
+}
+
+.item:nth-child(8) {
+    background-color: #d0a;
+}
+
+:root {
+    --justify-content: flex-start;
+    --flex-direction: row;
+}
+
+.container {
+    justify-content: var(--justify-content);
+    flex-direction: var(--flex-direction);
+}
