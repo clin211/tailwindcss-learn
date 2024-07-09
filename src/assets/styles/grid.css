@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 50px); /* 10 columns with 50px width each */
+    grid-template-rows: repeat(10, 50px); /* 10 rows with 50px height each */
+    gap: 50px; /* Gap between the grid items */
+    transition-duration: 2s;
+}
+
+.grid-container:hover {
+    gap: 0px; /* Gap between the grid items */
+}
+
+.grid-container .puzzle-piece {
+//border-radius: 50%;
+}
+.grid-container .puzzle-piece:nth-child(6n) {
+    transform: rotate(360deg);
+    translate: 100px 0;
+}
+.grid-container .puzzle-piece:nth-child(6n + 1) {
+    transform: rotate(-90deg);
+    translate: 0px -100px;
+}
+.grid-container .puzzle-piece:nth-child(6n + 2) {
+    transform: rotate(180deg);
+    translate: 0px 100px;
+}
+.grid-container .puzzle-piece:nth-child(6n + 3) {
+    transform: rotate(270deg);
+    translate: -100px 0;
+}
+.grid-container .puzzle-piece:nth-child(6n + 4) {
+    transform: rotate(90deg);
+    translate: 100px 0px;
+}
+.grid-container .puzzle-piece:nth-child(6n + 5) {
+    transform: rotate(-180deg);
+    translate: -100px 0;
+}
+
+.grid-container:hover .puzzle-piece{
+    transform: rotate(0deg);
+    translate: 0 0;
+    border-radius: 0%;
+}
+
+.puzzle-piece {
+    width: 50px;
+    height: 50px;
+    background-image: url("https://justicebibleapp.w3spaces.com/fromthepages2.jpg");
+    background-size: 500px 500px; /* Adjust to the total grid size */
+    border: 0px solid #000;
+    transition-duration: 2s;
+}
