@@ -10,6 +10,7 @@ import {
 import HoverEffect from "@/components/HoverEffectCard";
 import BentoGrid, { BentoGridItem } from "@/components/BentoGrid";
 import Search from "@/components/Search";
+import Counter from "@/components/Counter";
 
 const projects = [
     {
@@ -104,7 +105,12 @@ const items = [
 export default function Page() {
     return (
         <div className="max-w-5xl mx-auto px-8">
-            <Search />
+            <div>
+                <Search />
+                <Counter />
+            </div>
+
+            <br />
             <HoverEffect items={projects} />
             <BentoGrid className="max-w-4xl mx-auto">
                 {items.map((item, i) => (

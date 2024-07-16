@@ -1,0 +1,141 @@
+:root {
+    --ease-out-sine: cubic-bezier(0.61, 1, 0.88, 1);
+    --ease-in-sine: cubic-bezier(0.12, 0, 0.39, 0);
+    --animation-duration: 0.25s;
+}
+
+html {
+    view-transition-name: none;
+}
+
+::view-transition-new(value-increment) {
+    transform-origin: 100% 0%;
+    animation: slide-in var(--animation-duration) var(--ease-out-sine);
+}
+
+::view-transition-old(value-increment) {
+    transform-origin: 100% 100%;
+    animation: slide-out var(--animation-duration) var(--ease-in-sine);
+}
+
+::view-transition-new(value-decrement) {
+    transform-origin: 0% 100%;
+    animation: slide-out var(--animation-duration) reverse var(--ease-in-sine);
+}
+
+::view-transition-old(value-decrement) {
+    transform-origin: 0% 0%;
+    animation: slide-in var(--animation-duration) reverse var(--ease-out-sine);
+}
+
+@keyframes slide-in {
+    from {
+        translate: 0% -100%;
+        scale: 0.2;
+    }
+    to {
+        translate: 0% 0%;
+        scale: 1;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        translate: 0% 0%;
+        scale: 1;
+    }
+    to {
+        translate: 0% 100%;
+        scale: 0.2;
+    }
+}
+
+/* matter of style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui;
+    min-block-size: 100svb;
+    display: grid;
+    place-items: center;
+    color: black;
+    background: white;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2.5rem;
+}
+
+output {
+    min-inline-size: 2ch;
+    text-align: center;
+}
+
+button {
+    font: inherit;
+    color: white;
+    background: black;
+    border: none;
+    padding: 0.325em;
+    inline-size: 1em;
+    block-size: 1em;
+    border-radius: 50%;
+}
+
+button > svg {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+}
+
+button:focus-visible {
+    outline: 1px solid black;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    button {
+        transition: translate 0.2s cubic-bezier(0.25, 0, 0.3, 1),
+        outline-offset 0.2s cubic-bezier(0.5, -0.5, 0.1, 1.5);
+    }
+
+    button:active {
+        outline-offset: 0px;
+    }
+
+    button:nth-of-type(1):hover {
+        translate: 0 2px;
+    }
+
+    button:nth-of-type(2):hover {
+        translate: 0 -2px;
+    }
+
+    button:nth-of-type(1):active,
+    button:nth-of-type(2):active {
+        translate: 0 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+        background: black;
+    }
+
+    button {
+        color: black;
+        background: white;
+    }
+
+    button:focus-visible {
+        outline: 1px solid white;
+    }
+}
