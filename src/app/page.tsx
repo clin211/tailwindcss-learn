@@ -9,6 +9,7 @@ import {
 } from "@tabler/icons-react";
 import HoverEffect from "@/components/HoverEffectCard";
 import BentoGrid, { BentoGridItem } from "@/components/BentoGrid";
+import Search from "@/components/Search";
 
 const projects = [
     {
@@ -103,6 +104,7 @@ const items = [
 export default function Page() {
     return (
         <div className="max-w-5xl mx-auto px-8">
+            <Search />
             <HoverEffect items={projects} />
             <BentoGrid className="max-w-4xl mx-auto">
                 {items.map((item, i) => (
