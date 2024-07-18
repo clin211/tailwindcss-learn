@@ -104,26 +104,26 @@ const items = [
 
 export default function Page() {
     return (
-        <div className="max-w-5xl mx-auto px-8">
+        <div>
             <div>
                 <Search />
                 <Counter />
             </div>
-
-            <br />
-            <HoverEffect items={projects} />
-            <BentoGrid className="max-w-4xl mx-auto">
-                {items.map((item, i) => (
-                    <BentoGridItem
-                        key={i}
-                        title={item.title}
-                        description={item.description}
-                        header={item.header}
-                        icon={item.icon}
-                        className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-                    />
-                ))}
-            </BentoGrid>
+            <div className="max-w-5xl mx-auto px-8">
+                <HoverEffect items={projects} />
+                <BentoGrid className="max-w-4xl mx-auto">
+                    {items.map((item, i) => (
+                        <BentoGridItem
+                            key={i}
+                            title={item.title}
+                            description={item.description}
+                            header={item.header}
+                            icon={item.icon}
+                            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+                        />
+                    ))}
+                </BentoGrid>
+            </div>
         </div>
     );
 }

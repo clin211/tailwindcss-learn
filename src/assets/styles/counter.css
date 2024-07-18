@@ -57,16 +57,16 @@ html {
     padding: 0;
 }
 
-body {
+/* body {
     font-family: system-ui;
     min-block-size: 100svb;
     display: grid;
     place-items: center;
     color: black;
     background: white;
-}
+} */
 
-div {
+.counter-container {
     display: flex;
     align-items: center;
     gap: 1rem;

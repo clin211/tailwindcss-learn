@@ -12,11 +12,11 @@ body {
     font-family: "Exo", Arial, sans-serif;
     background-color: #557;
     color: #fff;
-    display: grid;
+    /* display: grid; */
     gap: 1rem;
     align-content: start;
-    justify-content: center;
-    justify-items: center;
+    /* justify-content: center;
+    justify-items: center; */
     padding: 1rem;
 }
 

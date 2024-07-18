@@ -20,7 +20,7 @@ body {
 }
 
 .grid-container .puzzle-piece {
-//border-radius: 50%;
+    border-radius: 50%;
 }
 .grid-container .puzzle-piece:nth-child(6n) {
     transform: rotate(360deg);
