@@ -21,4 +21,18 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .shape-outside {
+    shape-outside: margin-box;
+  }
+
+  .clearfix:before,
+  .clearfix:after {
+    content: " ";
+    display: table
+  }
+
+  .clearfix:after {
+    clear: both;
+  }
 }
