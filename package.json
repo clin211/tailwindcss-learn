@@ -16,6 +16,7 @@
     "@tabler/icons-react": "^3.9.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.13",
+    "gsap": "^3.12.5",
     "markdown-it": "^14.1.0",
     "next": "14.2.4",
     "react": "^18",
@@ -25,7 +26,8 @@
     "simplex-noise": "^4.0.1",
     "tailwind-merge": "^2.4.0",
     "three": "^0.166.1",
-    "three-globe": "^2.31.1"
+    "three-globe": "^2.31.1",
+    "tweakpane": "^4.0.4"
   },
   "devDependencies": {
     "@shikijs/twoslash": "^1.12.1",
